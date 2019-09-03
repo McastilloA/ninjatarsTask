@@ -1,0 +1,48 @@
+<div class="margin-task container-fluid">
+  <div class="mb-3 mt-3">
+    <p-card>
+      <div class="d-flex align-items-center">
+        <div>
+          <h4>[Name project box]</h4>
+          <span class="text-muted">Here is the list of member</span>
+        </div>
+        <div class="ml-auto">
+          <app-modalmember></app-modalmember>
+        </div>
+      </div>
+    </p-card>
+  </div>
+
+  <p-card>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 p-3" *ngFor="let member of members">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <a href="#"><img src="../../../assets/santamarta.jpg" alt="user" class="img-fluid"
+                    style="width: 100%"></a>
+                <div class="mt-4">
+                  <button class="btn btn-info btn-block" [routerLink]="['/hometask/profile']"
+                    routerLinkActive="router-link-active"><i class="far fa-eye"></i> watch</button>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h4 class="box-title m-b-0">{{ member.nameUser }}</h4>
+                <address>
+                  <small class="text-muted">Email</small><br>
+                  {{ member.email }}
+                  <br>
+                  <small class="text-muted">Phone Mobile</small><br>
+                  {{ member.phone }}
+                  <br>
+                  <span class="badge badge-success">{{ member.profile }}</span>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-card>
+</div>

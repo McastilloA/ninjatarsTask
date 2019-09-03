@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div id="main-wrapper">
+    <div class="page-wrapper">
+      <div class="">
+        <div class="right-part mail-list bg-white">
+          <div class="mb-3 mt-3">
+            <p-card>
+              <div class="d-flex align-items-center" *ngFor="let task of _tasks">
+                <div >
+                  <h4>{{ task.name }}</h4>
+                  <span class="text-muted">Here is the list of task</span>
+                </div>
+              </div>
+            </p-card>
+          </div>
+          <p-card>
+            <div class="bg-light p-3 d-flex align-items-center do-block">
+              <div class="">
+                <div class="btn-group mr-2" role="group" aria-label="Button group with nested dropdown">
+                  <button type="button" class="btn btn-outline-secondary" pTooltip="Update"><i
+                      class="pi pi-refresh"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <tbody *ngFor="let task of tasks">
+                  <tr>
+                    <td class="user-name"><strong>From: </strong><span><img src="../../../assets/santamarta.jpg"
+                          alt="user" class="rounded-circle" width="30" height="30"></span><span>
+                        {{ task.user_id }}</span></td>
+                    <td class="user-name"><strong>To: </strong><span><img src="../../../assets/santamarta.jpg"
+                          alt="user" class="rounded-circle" width="30" height="30"></span><span>
+                        {{ task.user_to_id }}</span></td>
+                    <td class="max-texts">
+                      <a class="link" href="#" [routerLink]="['/hometask/seetask']"
+                        routerLinkActive="router-link-active">
+                        <span class="badge badge-success mr-2">
+                          {{ task.status }}
+                        </span>
+                        <span class="text-dark font-normal">{{ task.name }} </span>
+                      </a><i class="pi pi-comments" style="font-size: 2em; vertical-align: middle;"></i>3
+                    </td>
+                    <td class="time">
+                      <p-progressBar [value]="value"></p-progressBar>
+                    </td>
+                    <td class="text-muted time"><i class="pi pi-calendar"></i> {{ task.created_at | date:'medium' }}<br>
+                      <i class="pi pi-clock"></i> {{ task.limit_date | date:'medium' }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </p-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

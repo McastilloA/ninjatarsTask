@@ -1,0 +1,111 @@
+<div class="page-content container-fluid p-3">
+  <div class="mb-3 mt-3">
+    <p-card>
+      <div class="d-flex align-items-center">
+        <div>
+          <h4>[Name the owner of profile]</h4>
+        </div>
+      </div>
+    </p-card>
+  </div>
+  <p-card>
+    <div class="row">
+      <div class="col-xl-3 col-lg-5 col-md-12">
+        <p-card header="Hanna Gover" subheader="Administrator" [style]="{width: '340px'}" styleClass="ui-card-shadow">
+          <p-header>
+            <img src="Card" src="../../../assets/santamarta.jpg">
+          </p-header>
+          <hr>
+          <div>
+            <small class="text-muted">Email address </small>
+            <h6>hannagover@gmail.com</h6> <small class="text-muted pt-4 db">Phone mobile</small>
+            <h6>320 123 4567</h6>
+          </div>
+        </p-card>
+      </div>
+      <div class="col-xl-9 col-lg-7 col-md-12">
+        <p-tabView>
+          <p-tabPanel header="Account Setting" leftIcon="fas fa-user-cog">
+            <div class="ui-g ui-fluid">
+              <div class="ui-md-12 ui-sm-6 mt-3">
+                <div class="ui-inputgroup">
+                  <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                  <input type="text" pInputText placeholder="User Name">
+                </div>
+              </div>
+              <div class="ui-md-12 ui-sm-6 mt-3">
+                <div class="ui-inputgroup">
+                  <span class="ui-inputgroup-addon">@</span>
+                  <input type="text" pInputText placeholder="Email">
+                </div>
+              </div>
+              <div class="ui-md-12 ui-sm-6 mt-3">
+                <div class="ui-inputgroup">
+                  <span class="ui-inputgroup-addon"><i class="pi pi-info-circle"></i></span>
+                  <input type="email" pInputText placeholder="Name" pattern="@" required>
+                </div>
+              </div>
+              <div class="ui-md-12 ui-sm-6 mt-3">
+                <div class="ui-inputgroup">
+                  <span class="ui-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                  <input type="password" pPassword placeholder="Password">
+                </div>
+              </div>
+              <div class="ui-md-12 ui-sm-6 mt-3">
+                <div class="ui-inputgroup">
+                  <span class="ui-inputgroup-addon"><i class="pi pi-mobile"></i></span>
+                  <p-inputMask mask="(999) 999-9999" [(ngModel)]="val4" placeholder="Number mobile"></p-inputMask>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 mt-3" style="text-align: end">
+              <p-footer>
+                <button type="button" class="btn btn-info btn-rounded mr-1"><i class="far fa-save"></i> Save</button>
+                <button type="button" class="btn btn-danger btn-rounded"><i class="far fa-trash-alt"></i>
+                  Delete</button>
+              </p-footer>
+            </div>
+          </p-tabPanel>
+
+          <p-tabPanel header="Profile" leftIcon="far fa-eye">
+            <div class="tab-pane fade show active" id="last-month" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="card-body">
+                <h4 class="font-medium">Finished work list</h4>
+                <hr>
+                <p-accordion>
+                  <p-accordionTab header="[Name of project one]">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">[name of task one]</li>
+                      <li class="list-group-item">[name of task two]</li>
+                      <li class="list-group-item">[name of task three]</li>
+                      <li class="list-group-item">[name of task four]</li>
+                      <li class="list-group-item">[name of task five]</li>
+                    </ul>
+                  </p-accordionTab>
+                  <p-accordionTab header="[Name of project two]">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">[name of task one]</li>
+                      <li class="list-group-item">[name of task two]</li>
+                      <li class="list-group-item">[name of task three]</li>
+                      <li class="list-group-item">[name of task four]</li>
+                      <li class="list-group-item">[name of task five]</li>
+                    </ul>
+                  </p-accordionTab>
+                  <p-accordionTab header="[Name of project three]">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">[name of task one]</li>
+                      <li class="list-group-item">[name of task two]</li>
+                      <li class="list-group-item">[name of task three]</li>
+                      <li class="list-group-item">[name of task four]</li>
+                      <li class="list-group-item">[name of task five]</li>
+                    </ul>
+                  </p-accordionTab>
+                </p-accordion>
+              </div>
+            </div>
+          </p-tabPanel>
+        </p-tabView>
+      </div>
+    </div>
+  </p-card>
+</div>

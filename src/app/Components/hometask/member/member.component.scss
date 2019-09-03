@@ -1,0 +1,9 @@
+:host {
+    ::ng-deep .ui-overlaypanel {
+        position: absolute;
+        margin-top: 10px;
+        top: 125px !important;
+        left: 20px !important;
+        text-align: left;
+    }
+}

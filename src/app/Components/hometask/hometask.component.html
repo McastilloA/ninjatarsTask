@@ -1,0 +1,90 @@
+<div class="d-flex" id="wrapper">
+  <div class="border-right" id="sidebar-wrapper" *ngIf="wrapper">
+    <div class="bg-info text-white text-center p-4">Demostration project uno firefox</div>
+    <div class="sidebar-heading">
+      <app-modaltask></app-modaltask>
+    </div>
+    <div class="divider"></div>
+    <ul class="list-group">
+      <li>
+        <small class="p-3 grey-text text-lighten-1 db">Folders</small>
+      </li>
+      <li class="list-group-item">
+        <a href="" class="list-group-item-action" [routerLink]="['/hometask/member']"
+          routerLinkActive="router-link-active">
+          <i class="fas fa-users"></i> Members<span class="badge badge-secondary float-right">15</span>
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="#" class="active list-group-item-action" routerLink="/hometask/task/2"><i class="fas fa-tasks"></i>
+          Task<span class="badge badge-secondary float-right">6</span>
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="" class="list-group-item-action" [routerLink]="['/hometask/metrics']"
+          routerLinkActive="router-link-active">
+          <i class="fas fa-chart-pie"></i> Metrics
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="" class="list-group-item-action" [routerLink]="['/hometask/setting']"
+          routerLinkActive="router-link-active">
+          <i class="fas fa-cogs"></i> Setting project
+        </a>
+      </li>
+      <li class="list-group-item">
+        <hr>
+      </li>
+      <li>
+        <small class="p-3 grey-text text-lighten-1 db">Groups</small>
+      </li>
+      <li class="list-group-item">
+        <a href="" class="list-group-item-action"><i class="fas fa-certificate"></i> Holcim</a>
+      </li>
+      <li class="list-group-item">
+        <a href="" class="list-group-item-action"><i class="fas fa-certificate"></i> Kikes</a>
+      </li>
+      <li class="list-group-item">
+        <a href="" class="list-group-item-action"><i class="fas fa-certificate"></i> Estelar</a>
+      </li>
+      <li class="list-group-item">
+        <a href="" class="list-group-item-action"><i class="fas fa-certificate"></i> Work</a>
+      </li>
+      <li class="list-group-item">
+        <hr>
+      </li>
+      <li>
+        <small class="p-3 grey-text text-lighten-1 db">Messages</small>
+      </li>
+    </ul>
+  </div>
+
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div (click)="menuToggle()" class="ml-3">
+        <i class="fas fa-angle-double-left fa-1x"></i> Close
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="ml-auto mr-3 p-1">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-secondary" pTooltip="Back" tooltipPosition="bottom"><i
+                class="pi pi-arrow-left"></i></button>
+          </div>
+          <button type="button" class="btn btn-outline-secondary" pTooltip="Search date" tooltipPosition="bottom"><i
+              class="pi pi-calendar"></i>
+            <p-calendar selectionMode="range" [readonlyInput]="true"></p-calendar>
+          </button>
+          <button type="button" class="btn btn-outline-secondary" pTooltip="Search" tooltipPosition="bottom"><i
+              class="pi pi-search"></i></button>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<button type="button" class="btn btn-block waves-effect waves-light btn-info d-block" (click)="showDialog()"><i
+    class="fas fa-folder-plus"></i> Task</button>
+
+<p-dialog header="Add new task" [(visible)]="display" [modal]="true" [responsive]="true" [maximizable]="true"
+  [style]="{width: '650px', minWidth: '200px'}" [minY]="70" [maximizable]="true" [baseZIndex]="10000">
+  <div class="ui-g ui-fluid">
+    <div class="ui-md-12 ui-sm-12">
+      <form class="form-horizontal form-material">
+        <div class="ui-g ui-fluid">
+          <div class="ui-md-12 ui-sm-12">
+            <span class="ui-float-label">
+              <input id="float-input" type="text" size="30" pInputText>
+              <label for="float-input">Name</label>
+            </span>
+          </div>
+        </div>
+        <div class="ui-g ui-fluid">
+          <div class="ui-md-12 ui-sm-12 mt-3">
+            <span class="ui-float-label">
+              <textarea id="float-description" type="text" size="30" pInputTextarea></textarea>
+              <label for="float-description">Description</label>
+            </span>
+          </div>
+        </div>
+        <div class="ui-g ui-fluid">
+          <div class="ui-md-12 ui-sm-12 mt-3">
+            <p-calendar selectionMode="range" [readonlyInput]="true" placeholder="Limit date"></p-calendar>
+          </div>
+        </div>
+        <div class="ui-g ui-fluid">
+          <div class="ui-md-12 ui-sm-12 mt-3">
+            <p-chips placeholder="Tags"></p-chips>
+          </div>
+        </div>
+        <div class="ui-g ui-fluid">
+          <div class="ui-md-12 ui-sm-12 mt-3">
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Asign to</option>
+                <option value="0">Juan Perez</option>
+                <option value="1">Dora Jimenez</option>
+                <option value="2">Pablo Humberto</option>
+                <option value="3">Manuel Hernandez</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <p-footer style="text-align: end">
+    <button type="button" class="btn btn-info btn-rounded mr-2"><i class="far fa-save"></i> Save</button>
+    <button type="button" class="btn btn-danger btn-rounded"><i class="far fa-trash-alt"></i> Delete</button>
+  </p-footer>
+</p-dialog>

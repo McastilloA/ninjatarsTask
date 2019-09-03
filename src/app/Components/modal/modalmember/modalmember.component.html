@@ -1,0 +1,36 @@
+<button type="button" class="btn btn-info btn-rounded m-t-10 mb-2" data-toggle="modal" data-target="#add-contact"
+  (click)="showDialog()"><i class="fas fa-plus-circle"></i> New invitation</button>
+
+<p-dialog header="Add member to project" [(visible)]="display" [modal]="true" [responsive]="true" [maximizable]="true"
+  [style]="{width: '650px', minWidth: '200px'}" [minY]="70" [maximizable]="true" [baseZIndex]="10000">
+  <div class="ui-g ui-fluid">
+    <div class="ui-md-12 ui-sm-12">
+      <form class="form-horizontal form-material">
+        <div class="ui-g ui-fluid">
+          <div class="ui-md-12 ui-sm-12">
+            <div class="ui-inputgroup">
+              <span class="ui-inputgroup-addon">@</span>
+              <input type="text" pInputText placeholder="Email">
+            </div>
+          </div>
+        </div>
+        <div class="ui-g ui-fluid">
+          <div class="ui-md-12 ui-sm-12">
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option selected>Select a role</option>
+                <option value="usr">User</option>
+                <option value="mod">Moderator</option>
+                <option value="adm">Administrator</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <p-footer>
+    <button type="button" class="btn btn-info waves-effect" data-dismiss="modal"><i class="far fa-paper-plane"></i>
+      Submit</button>
+  </p-footer>
+</p-dialog>

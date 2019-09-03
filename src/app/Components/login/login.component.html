@@ -1,0 +1,43 @@
+<div class="container p-5">
+
+
+  <div class="container bg-info text-center text-white">
+    <h1 class="p-2">{{ app_name }}</h1>
+  </div>
+
+  <form class="text-center border border-light p-5"  #formLogin="ngForm" (ngSubmit)="onLogin(formLogin)">
+    <input type="text" id="username" name="username" class="form-control mb-4" placeholder="username" [(ngModel)]="token.username" required>
+    <input type="password" id="password" name="password" class="form-control mb-4" placeholder="password" [(ngModel)]="token.password" required>
+
+    <div class="d-flex justify-content-around">
+      <div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+          <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+        </div>
+      </div>
+      <div>
+        <a href="">Forgot password?</a>
+      </div>
+    </div>
+
+    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+    <p>Not a member?
+      <a href="">Register</a>
+    </p>
+    <p>or sign in with:</p>
+    <a class="light-blue-text mx-2">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="light-blue-text mx-2">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="light-blue-text mx-2">
+      <i class="fab fa-google"></i>
+    </a>
+    <a class="light-blue-text mx-2">
+      <i class="fab fa-github"></i>
+    </a>
+  </form>
+</div>
